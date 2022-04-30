@@ -229,10 +229,6 @@ export default function UserSettingScreen({ navigation }: SettingStackProps<'Set
 
   const uploadUserUpdate = async () => {
     setUploading(true)
-
-    console.log('userIconUri', userIconUri);
-    console.log('addressDocUri', addressDocUri);
-    console.log('incomeDocUri', incomeDocUri);
     //Set User Doc
     try {
       if (userId) {

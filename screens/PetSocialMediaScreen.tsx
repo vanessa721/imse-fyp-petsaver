@@ -31,9 +31,9 @@ export default function PetSocialMediaScreen({ route, navigation }: { route: any
   const getData = async () => {
 
     var socialMediaPostRef = collection(db, "PetPost/" + petPostDataItem.id + '/socialMediaPost');
+    setSocialMediaDataArray([])
 
     const q = query(socialMediaPostRef, orderBy('createdate', 'desc'));
-    setSocialMediaDataArray([])
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((docSnap) => {
       const newjson = {
@@ -55,7 +55,6 @@ export default function PetSocialMediaScreen({ route, navigation }: { route: any
 
   const renderItem = (petPostDataItem: any) => {
     return (
-
       <View style={styles.CardContainer}>
         {
           petPostDataItem.item.imagepath != "" &&
@@ -66,16 +65,13 @@ export default function PetSocialMediaScreen({ route, navigation }: { route: any
                 setSelectedId(petPostDataItem.index);
               }}
               underlayColor="white">
-
               <Image style={styles.imageitem}
                 source={{ uri: petPostDataItem.item.imagepath }}
               />
             </TouchableHighlight >
 
-
             <Dialog isVisible={petPostDataItem.index === selectedId}
               onBackdropPress={() => {
-
                 setSelectedId(null);
               }}>
               <Image style={styles.imageitem}
@@ -239,7 +235,7 @@ function timestampToDate(t: number) {
 
   var seconds = "0" + date.getSeconds();
 
-  var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+  var formattedTime = date.getDate() + "/" + date.getMonth() + " (" + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ") ";
 
   return formattedTime;
 

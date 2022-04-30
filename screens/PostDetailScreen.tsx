@@ -124,7 +124,6 @@ export default function PostDetailScreen({ route, navigation }: { route: any, na
 
       var postRef = doc(db, "PetPost", petItem.id);
       var requestRef = doc(postRef, "contactRequest", userId);
-
       const unsub = await setDoc(requestRef, {
         status: 'New request',
         requestTime: new Date(),

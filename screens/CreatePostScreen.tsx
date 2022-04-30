@@ -94,15 +94,11 @@ export default function CreatePostScreen({ navigation }: SettingStackProps<'Sett
 
   const uploadPost = async () => {
     setUploading(true);
-
     const userId = auth.currentUser?.uid;
-    console.log("auth.currentUser?.uid: ", userId)
-
     try {
       const docRef = await addDoc(collection(db, "PetPost"), {
         createdate: new Date(),
         postcreator: userId,
-
         imagepath: imagepath,
         petname: petName,
         petgender: petGender,

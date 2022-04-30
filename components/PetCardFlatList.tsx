@@ -21,10 +21,8 @@ export function PetCardFlatList(this: any, props: PetCardFlatListProps) {
             var q = query(collection(db, "PetPost"), orderBy('createdate', "desc"));
         }
 
-
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
             setpetPostDataArray([])
-
             querySnapshot.forEach((doc) => {
                 if (!doc.data()['adopterID']) {
                     const newjson = {
@@ -57,7 +55,6 @@ export function PetCardFlatList(this: any, props: PetCardFlatListProps) {
 
             });
         });
-
     }
 
     useEffect(() => {
@@ -78,7 +75,6 @@ export function PetCardFlatList(this: any, props: PetCardFlatListProps) {
                         />
                     </View>
                     <FlatList
-
                         showsVerticalScrollIndicator={true}
                         showsHorizontalScrollIndicator={false}
                         data={petPostDataArray}

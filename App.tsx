@@ -83,23 +83,11 @@ export default function App() {
     );
   };
 
-
   if (!isLoadingComplete) {
     return null;
   }
   return (
     <>
-      {/* <SafeAreaProvider>
-        <StatusBar />
-        <NavigationContainer
-          linking={LinkingConfiguration}>
-          <Stack.Navigator>
-            <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen}></Stack.Screen>
-            <Stack.Screen options={{ headerShown: false }} name="Root" component={RootScreen}></Stack.Screen>
-          </Stack.Navigator>
-        </NavigationContainer>
-
-      </SafeAreaProvider> */}
       {showRealApp ? (
         <SafeAreaProvider>
           <StatusBar />

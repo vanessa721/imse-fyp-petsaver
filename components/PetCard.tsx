@@ -30,7 +30,6 @@ export const PetCard = ({ item }: any, navigation: any, petTypeFilter: string | 
                         </Button>
                     </View>
                 </View>
-
             }
         </View>
 

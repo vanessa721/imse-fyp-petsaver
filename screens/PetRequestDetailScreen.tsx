@@ -1,5 +1,5 @@
 
-import { deleteField, doc, onSnapshot, updateDoc } from "firebase/firestore";
+import { deleteField, doc, onSnapshot, updateDoc, collection, deleteDoc } from "firebase/firestore";
 import React, { useEffect, useState } from 'react';
 import { Alert, Linking, ScrollView, StyleSheet, View } from 'react-native';
 import { Avatar, Button, ListItem, Text } from 'react-native-elements';
@@ -52,22 +52,24 @@ export default function PetRequestDetailScreen({ route, navigation }: { route: a
         console.error("requestUserID or petPostDataItem.id not found:  ", requestUserID, petPostDataItem.id);
         return false;
       }
-      if (requestUserID != petPostDataItem.adopterID) {
-        console.log('You can only reject current adoptor')
-        Alert.alert(
-          "Request Failed", "You can set petowner to adopter",
-          [
-            { text: "OK", onPress: () => console.log("OK Pressed") }
-          ]
-        );
-        return false;
+      if (requestUserID == petPostDataItem.adopterID) {
+        const petPostRef = doc(db, 'PetPost', petPostDataItem.id);
+        await updateDoc(petPostRef, {
+          adopterID: deleteField()
+        });
+        setPetPostDataItem({ ...petPostDataItem, adopterID: '' })
+        console.log("adopterID deleteField for post: ", petPostRef.id);
       }
-      const petPostRef = doc(db, 'PetPost', petPostDataItem.id);
-      await updateDoc(petPostRef, {
-        adopterID: deleteField()
-      });
-      setPetPostDataItem({ ...petPostDataItem, adopterID: '' })
-      console.log("adopterID deleteField for post: ", petPostRef.id);
+
+      var requestRef = doc(db,
+        "PetPost/" + petPostDataItem.id + '/contactRequest/', requestUserID);
+      deleteDoc(requestRef);
+
+      var tempList = requestUserList;
+      tempList.splice(swipeableIndex, 1);
+      setRequstUserList(tempList);
+      console.error("tempList:  ", tempList);
+
 
     } catch (e) {
       console.error("Error adding document:  ", e);

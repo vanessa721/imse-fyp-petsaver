@@ -7,7 +7,6 @@ import { assetsObject } from '../assets/asset';
 
 export const PetCatagory = ({ item }: any, petTypeFilter: string, setPetFilter: any) => (
     <View style={styles.imageitemContainer}>
-
         <TouchableOpacity
             onPress={() => {
                 if (item.title != petTypeFilter) {
@@ -26,7 +25,6 @@ export const PetCatagory = ({ item }: any, petTypeFilter: string, setPetFilter: 
                     source={assetsObject[item.title]}
                 />
             }
-
         </TouchableOpacity>
         <Text style={{ fontWeight: 'bold' }}>{item.title}</Text>
     </View>
