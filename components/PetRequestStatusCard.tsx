@@ -1,4 +1,7 @@
-
+/*
+Description: Pet Request Status Card
+Purpose: 1. To To render the UI component
+*/
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import { Badge, Button, Text } from 'react-native-elements';
@@ -38,7 +41,6 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        //alignItems: 'flex-start', // if you want to fill rows left to right
         borderRadius: 25,
         padding: 10,
         borderWidth: 1,

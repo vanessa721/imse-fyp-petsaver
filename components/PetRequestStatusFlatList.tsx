@@ -1,4 +1,7 @@
-
+/*
+Description: Pet Request Status FlatList
+Purpose: 1. To To render the UI component
+*/
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { LinearGradient } from 'expo-linear-gradient';
 import { collection, doc, getDocs, onSnapshot, orderBy, query, where } from "firebase/firestore";

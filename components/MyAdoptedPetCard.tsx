@@ -1,3 +1,7 @@
+/*
+Description: My Adopted Pet Card
+Purpose: 1. To To render the UI component
+*/
 
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';

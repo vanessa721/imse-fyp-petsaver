@@ -1,14 +1,12 @@
-// Import the functions you need from the SDKs you need
+/*
+Description: Firebase config page
+Purpose: export firebase component 
+*/
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getStorage } from "firebase/storage";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDWrdHMGHCPRlvLkGJ5tSzqFt8iYM7FGPY",
   authDomain: "petsaver-1fa7d.firebaseapp.com",

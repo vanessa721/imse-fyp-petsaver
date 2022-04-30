@@ -1,4 +1,8 @@
-
+/*
+Description: User Setting Screen
+Purpose: 1. To render the UI
+         2. Implement uploadUserUpdate function 
+*/
 import { FontAwesome } from '@expo/vector-icons';
 import * as DocumentPicker from "expo-document-picker";
 import * as ImagePicker from 'expo-image-picker';
@@ -11,9 +15,6 @@ import { apartment_type_drop_down_data, boolean_drop_down_data, gender_drop_down
 import Dropdown from '../components/dropdown';
 import { auth, db, storage } from "../firebase";
 import { ImageInfo, SettingStackProps } from '../types';
-
-
-
 
 export default function UserSettingScreen({ navigation }: SettingStackProps<'Setting'>) {
   const [userIconUri, setUserIconImage] = useState<string | undefined>('');

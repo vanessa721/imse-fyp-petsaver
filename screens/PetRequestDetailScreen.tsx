@@ -1,3 +1,8 @@
+/*
+Description: Pet Request Detail Screen
+Purpose: 1. To render the UI
+         2. Implement approve request function 
+*/
 
 import { deleteField, doc, onSnapshot, updateDoc, collection, deleteDoc } from "firebase/firestore";
 import React, { useEffect, useState } from 'react';

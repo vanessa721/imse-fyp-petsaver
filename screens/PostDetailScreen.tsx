@@ -1,3 +1,8 @@
+/*
+Description: Post Detail Screen
+Purpose: 1. To render the UI
+         2. Implement checkFulfillRequirement function 
+*/
 
 import { FontAwesome } from '@expo/vector-icons';
 import { arrayRemove, arrayUnion, doc, onSnapshot, setDoc, updateDoc } from "firebase/firestore";

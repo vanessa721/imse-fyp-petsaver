@@ -1,3 +1,8 @@
+/*
+Description: Pet Social Media Screen
+Purpose: 1. To render the UI
+*/
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { collection, doc, getDocs, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useEffect, useState } from 'react';

@@ -1,3 +1,8 @@
+/*
+Description: This is the first page of the apps
+Purpose: 1. To Show AppIntroSlider when user first time launch the apps 
+         2. Render the Main Apps
+*/
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -20,8 +25,6 @@ const Stack = createNativeStackNavigator();
 
 function checkIsWeb() {
   return (Platform.OS === 'ios' || Platform.OS === 'android') ? false : true;
-  //for dev testing 
-  //return true 
 }
 
 
@@ -37,7 +40,6 @@ export default function App() {
   const onSkip = () => {
     setShowRealApp(true);
   };
-
 
   const RenderSliderItem = ({ item }: { item: any }) => {
     return (
@@ -66,11 +68,6 @@ export default function App() {
               fontWeight: 'bold', fontSize: 22,
               textDecorationColor: '#0a9396', textDecorationLine: 'underline'
             }}>Privacy Policy and Personal Information Collection Statement </Text>
-            {/* <Text style={{
-              fontWeight: 'bold', fontSize: 22,
-              textDecorationColor: '#0a9396', textDecorationLine: 'underline',
-            }}></Text> */}
-
             <ScrollView>
               <Text> {agreementTxt}</Text>
             </ScrollView>

@@ -1,3 +1,9 @@
+/*
+Description: Home Screen
+Purpose: 1. To render the UI of Home page
+*/
+
+
 import Constants from 'expo-constants';
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
@@ -26,7 +32,6 @@ export default function HomeScreen({ navigation }: HomeStackProps<'Home'>) {
         // @ts-ignore */}
         <SearchBar
           placeholder="Search for pets"
-
           value={searchValue}
           platform="default"
           round={true}
@@ -56,9 +61,6 @@ export default function HomeScreen({ navigation }: HomeStackProps<'Home'>) {
   </>
   );
 }
-
-
-
 
 const styles = StyleSheet.create({
   container: {

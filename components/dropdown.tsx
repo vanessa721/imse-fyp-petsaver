@@ -1,3 +1,8 @@
+/*
+Description: Adopted Pet Card
+Purpose: 1. To To render the UI component
+*/
+
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
@@ -34,9 +39,6 @@ const DropdownScreen = (props: any) => {
                     props.setValue(item.value)
                 }}
                 renderItem={item => _renderItem(item)}
-            // renderLeftIcon={() => (
-            //     <Image style={styles.icon} source={require('../assets/images/icon.png')} />
-            // )}
             />
         </View>
     );

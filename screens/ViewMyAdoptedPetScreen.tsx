@@ -1,3 +1,8 @@
+/*
+Description: View My Post Screen
+Purpose: 1. To render the UI
+*/
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from 'react';

@@ -1,3 +1,8 @@
+/*
+Description: Settings Screen
+Purpose: 1. To render the UI
+*/
+
 import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-elements';
 import { auth } from "../firebase";

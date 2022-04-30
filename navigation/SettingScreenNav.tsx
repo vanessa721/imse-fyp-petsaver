@@ -1,3 +1,8 @@
+/*
+Description: Settings Screen Stack Navigator
+Purpose: 1. To implement Stack.Navigator
+*/
+
 import { FontAwesome } from '@expo/vector-icons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Pressable, StyleSheet } from 'react-native';

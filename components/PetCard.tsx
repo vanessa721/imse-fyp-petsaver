@@ -1,3 +1,7 @@
+/*
+Description: Pet Card
+Purpose: 1. To To render the UI component
+*/
 
 import { Image, StyleSheet, View } from 'react-native';
 import { Button, Text } from 'react-native-elements';
@@ -32,9 +36,6 @@ export const PetCard = ({ item }: any, navigation: any, petTypeFilter: string | 
                 </View>
             }
         </View>
-
-
-
     </>
 
 );

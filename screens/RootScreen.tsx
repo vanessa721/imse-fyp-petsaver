@@ -1,3 +1,9 @@
+/*
+Description: Root Screen
+Purpose: 1. To render the UI
+         2. Implement BottomTab.Navigator 
+*/
+
 import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
@@ -5,8 +11,6 @@ import HomeScreenNav from '../navigation/HomeScreenNav';
 import MyFavScreenNav from '../navigation/MyFavScreenNav';
 import SettingScreenNav from '../navigation/SettingScreenNav';
 import { RootTabParamList } from '../types';
-
-
 
 export default function RootScreen({ navigation }: { navigation: any }) {
   const BottomTab = createBottomTabNavigator<RootTabParamList>();

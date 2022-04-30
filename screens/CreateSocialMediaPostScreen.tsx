@@ -1,3 +1,8 @@
+/*
+Description: Settings Screen
+Purpose: 1. To render the UI
+         2. implement the function of upload social media
+*/
 
 import * as ImagePicker from 'expo-image-picker';
 import { addDoc, collection } from "firebase/firestore";
@@ -7,9 +12,6 @@ import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-nat
 import { Button, ButtonGroup, Dialog, Input, Text } from 'react-native-elements';
 import { auth, db, storage } from "../firebase";
 import { ImageInfo } from '../types';
-
-
-
 
 export default function CreateSocialMediaPostScreen({ route, navigation }: { route: any, navigation: any }) {
   const [petPostDataItem, setPetPostDataItem] = useState(route.params.petPostDataItem)
@@ -23,10 +25,6 @@ export default function CreateSocialMediaPostScreen({ route, navigation }: { rou
 
   const [imagepath, setImage] = useState('');
   const [caption, setCaption] = useState('');
-
-
-  //const [familySize, setPetName] = useState('');
-
 
   const pickImageByLibrary = async () => {
     try {

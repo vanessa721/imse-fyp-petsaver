@@ -1,3 +1,8 @@
+/*
+Description: Create Post Screen
+Purpose: 1. To render the UI
+         2. Implement uploadPost function 
+*/
 
 import * as ImagePicker from 'expo-image-picker';
 import { addDoc, collection } from "firebase/firestore";
@@ -9,9 +14,6 @@ import { apartment_type_drop_down_data, boolean_drop_down_data, gender_drop_down
 import Dropdown from '../components/dropdown';
 import { auth, db, storage } from "../firebase";
 import { ImageInfo, SettingStackProps } from '../types';
-
-
-
 
 export default function CreatePostScreen({ navigation }: SettingStackProps<'Setting'>) {
   const [uploading, setUploading] = useState(false);

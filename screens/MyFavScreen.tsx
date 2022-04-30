@@ -1,3 +1,9 @@
+/*
+Description: Fav Screen
+Purpose: 1. To render the UI
+         2. Implement get fav post function 
+*/
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { collection, doc, onSnapshot, query, where } from "firebase/firestore";
 import { default as React, useEffect, useState } from 'react';

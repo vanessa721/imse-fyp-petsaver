@@ -1,3 +1,8 @@
+/*
+Description: Home Screen Stack Navigator
+Purpose: 1. To implement Stack.Navigator
+*/
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { StyleSheet } from 'react-native';
@@ -19,10 +24,6 @@ export default function HomeScreenNav({ navigation }: HomeStackProps<'Home'>) {
           headerShown: false
         }}
       ></Stack.Screen>
-
-
-
-
     </Stack.Navigator>
   );
 }

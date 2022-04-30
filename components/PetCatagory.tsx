@@ -1,9 +1,11 @@
+/*
+Description: Pet Catagory list in home page
+Purpose: 1. To To render the UI component
+*/
+
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Text } from 'react-native-elements';
 import { assetsObject } from '../assets/asset';
-
-
-
 
 export const PetCatagory = ({ item }: any, petTypeFilter: string, setPetFilter: any) => (
     <View style={styles.imageitemContainer}>

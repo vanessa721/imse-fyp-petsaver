@@ -1,10 +1,16 @@
+/*
+Description: Login Screen
+Purpose: 1. To render the UI
+         2. Implement Login and Register Logic 
+*/
+
+
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from "firebase/firestore";
 import React, { useEffect, useState } from 'react';
 import { Alert as moblieAlert, KeyboardAvoidingView, Platform, StyleSheet, View } from 'react-native';
 import { Button, Input, Text, Image, Avatar } from 'react-native-elements';
 import { auth, db } from "../firebase";
-// import Alert from "react-native-awesome-alerts";
 import { assetsObject } from '../assets/asset';
 export default function LoginScreen({ navigation }: { navigation: any }) {
   const [email, setEmail] = useState('');
@@ -52,9 +58,7 @@ export default function LoginScreen({ navigation }: { navigation: any }) {
             ]
           );
         }
-
       });
-
     setRegistering(false)
   }
 
@@ -95,10 +99,6 @@ export default function LoginScreen({ navigation }: { navigation: any }) {
         source={assetsObject['appIcon']}
         containerStyle={{ marginBottom: 0 }}
       />
-      {/* <Image
-        source={assetsObject['Rabbit']}
-      /> */}
-
       <View style={styles.inputcontainer}>
         <Input style={styles.input} placeholder='Email' onChangeText={text => setEmail(text)} />
         <Input style={styles.input} placeholder='Password' secureTextEntry onChangeText={text => setPassword(text)} />
@@ -134,11 +134,6 @@ export default function LoginScreen({ navigation }: { navigation: any }) {
         }}
         onPress={handleRegister}
         title="Register" />
-      {/* <Alert
-        show={showAlert}
-        message={alertMsg}
-        closeOnTouchOutside={true}
-      /> */}
     </KeyboardAvoidingView>
   );
 }
@@ -162,8 +157,6 @@ const styles = StyleSheet.create({
   },
 });
 
-
 function checkIsWeb() {
   return (Platform.OS === 'ios' || Platform.OS === 'android') ? false : true;
-  //return true //for dev testing 
 }
